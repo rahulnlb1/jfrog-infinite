@@ -6,4 +6,5 @@ pipelines:
        type: Bash
        execution:
          onExecute:
+           - ls
            - ./execute.sh 10000000000 101
