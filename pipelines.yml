@@ -20,5 +20,6 @@ pipelines:
            - echo $res_scriptGit_resourcePath
            - pushd $res_scriptGit_resourcePath
            - chmod 777 execute.sh
+           - cat execute.sh
            - ./execute.sh
            - popd
