@@ -12,6 +12,9 @@ pipelines:
    steps:
      - name: S_Bash_0023
        type: Bash
+       configuration:
+         inputResources:
+            - name: scriptGit
        execution:
          onExecute:
            - pushd $res_scriptGit_resourcePath
