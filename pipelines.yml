@@ -1,3 +1,11 @@
+resources:
+  - name: scriptGit
+    type: GitRepo
+    configuration:
+      path: rahulnlb1/jfrog-infinite
+      gitProvider: Github
+      branches:
+        include: ^{{gitBranch}}$
 
 pipelines:
  - name: infinite_pipeline
@@ -6,5 +14,7 @@ pipelines:
        type: Bash
        execution:
          onExecute:
+           - pushd $res_scriptGit_resourcePath
            - ls
            - ./execute.sh 10000000000 101
+           - popd
