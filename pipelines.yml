@@ -19,5 +19,5 @@ pipelines:
          onExecute:
            - echo $res_scriptGit_resourcePath
            - pushd $res_scriptGit_resourcePath
-           - ls
+           - ./execute.sh
            - popd
