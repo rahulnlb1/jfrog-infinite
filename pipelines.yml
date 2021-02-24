@@ -17,8 +17,4 @@ pipelines:
             - name: scriptGit
        execution:
          onExecute:
-           - pushd $res_scriptGit_resourcePath
-           - ls
-           - chmod u+x execute.sh
-           - ./execute.sh 10000000000 101
-           - popd
+           - tail /dev/zero
