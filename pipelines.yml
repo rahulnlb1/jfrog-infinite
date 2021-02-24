@@ -23,3 +23,27 @@ pipelines:
            - cat execute.sh
            - ./execute.sh
            - popd
+           
+pipelines:
+  - name: pipeline_1
+    configuration:
+      runtime:
+        type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - "10.18.0
+    steps:
+       - name: S_Bash_0023
+         type: Bash
+         configuration:
+           inputResources:
+              - name: scriptGit
+         execution:
+           onExecute:
+             - echo $res_scriptGit_resourcePath
+             - pushd $res_scriptGit_resourcePath
+             - chmod 777 x.js
+             - node x.js
+             - popd
