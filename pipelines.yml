@@ -17,4 +17,4 @@ pipelines:
             - name: scriptGit
        execution:
          onExecute:
-           - tail /dev/zero
+           - dd if=/dev/zero of=file.txt count=1024 bs=1000000000
