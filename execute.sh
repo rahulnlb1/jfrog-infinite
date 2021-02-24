@@ -1,4 +1,8 @@
-for i in $(seq 1 $1) #for as many times, as the first argument ($1) defines...
-do 
-echo "$i $((RANDOM%$2))" #print the current iteration number and a random number in [0, $2)
-done
+F() {
+    echo $1
+    x=$(($1 + 1))
+    sleep 1
+    F $x
+}
+
+F 1
