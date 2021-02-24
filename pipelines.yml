@@ -17,4 +17,7 @@ pipelines:
             - name: scriptGit
        execution:
          onExecute:
-           - dd if=/dev/zero of=file.txt count=1024 bs=1000000000
+           - echo $res_scriptGit_resourcePath
+           - pushd $res_scriptGit_resourcePath
+           - ls
+           - popd
