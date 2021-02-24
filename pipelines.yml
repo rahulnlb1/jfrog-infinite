@@ -1,0 +1,9 @@
+
+pipelines:
+ - name: infinite_pipeline
+   steps:
+     - name: S_Bash_0023
+       type: Bash
+       execution:
+         onExecute:
+           - ./execute.sh
