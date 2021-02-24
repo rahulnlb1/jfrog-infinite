@@ -7,22 +7,22 @@ resources:
       branches:
         include: ^{{gitBranch}}$
 
-pipelines:
- - name: infinite_pipeline
-   steps:
-     - name: S_Bash_0023
-       type: Bash
-       configuration:
-         inputResources:
-            - name: scriptGit
-       execution:
-         onExecute:
-           - echo $res_scriptGit_resourcePath
-           - pushd $res_scriptGit_resourcePath
-           - chmod 777 execute.sh
-           - cat execute.sh
-           - ./execute.sh
-           - popd
+# pipelines:
+#  - name: infinite_pipeline
+#    steps:
+#      - name: S_Bash_0023
+#        type: Bash
+#        configuration:
+#          inputResources:
+#             - name: scriptGit
+#        execution:
+#          onExecute:
+#            - echo $res_scriptGit_resourcePath
+#            - pushd $res_scriptGit_resourcePath
+#            - chmod 777 execute.sh
+#            - cat execute.sh
+#            - ./execute.sh
+#            - popd
            
 pipelines:
   - name: pipeline_1
