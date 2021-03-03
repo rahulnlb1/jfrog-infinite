@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: rahulnlb1/jfrog-infinite
-      gitProvider: Github
+      gitProvider: RahulGithub
       branches:
         include: ^{{gitBranch}}$
 
