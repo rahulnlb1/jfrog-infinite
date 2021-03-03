@@ -36,7 +36,7 @@ pipelines:
               - "10.18.0"
     steps:
        - name: S_Bash_0023
-         type: Bash
+         type: PowerShell
          configuration:
            inputResources:
               - name: scriptGit
