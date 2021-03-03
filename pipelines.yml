@@ -42,8 +42,9 @@ pipelines:
               - name: scriptGit
          execution:
            onExecute:
-             - Write-Output $res_scriptGit_resourcePath
-             - Push-Location $res_scriptGit_resourcePath
-             - chmod 777 x.js
-             - node x.js
-             - Pop-Location
+              - Write-Output "Hello World"
+#              - Write-Output $res_scriptGit_resourcePath
+#              - Push-Location $res_scriptGit_resourcePath
+#              - chmod 777 x.js
+#              - node x.js
+#              - Pop-Location
