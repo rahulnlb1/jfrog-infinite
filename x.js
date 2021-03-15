@@ -17,4 +17,4 @@ function MyRecord() {
 }
 setInterval(()=> {
   console.log(process.memoryUsage())
-},100);
+},10000);
