@@ -36,14 +36,15 @@ pipelines:
               - "10.18.0"
     steps:
        - name: S_Bash_0023
-         type: PowerShell
+         type: Bash
          configuration:
            inputResources:
               - name: scriptGit
          execution:
            onExecute:
-             - Write-Output "Hello World"
-             - Write-Output $res_scriptGit_resourcePath
-             - Push-Location $res_scriptGit_resourcePath
+             - echo "Hello World"
+             - echo $res_scriptGit_resourcePath
+             - pushd $res_scriptGit_resourcePath
+             - chmod 777 x.js
              - node x.js
-             - Pop-Location
+             - popd
